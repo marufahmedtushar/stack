@@ -1,10 +1,11 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './components/Home/Home';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
+import Dashboard from './components/Dashboard/Dashboard';
+import SignIn from './components/Signin/Signin';
+import SignUp from './components/Signup/Signup';
+import Users from './components/Users/Users';
 import Main from './layout/Main';
-
+import PrivateRoute from './routes/PrivateRoute';
 function App() {
   const router = createBrowserRouter([
 
@@ -15,13 +16,16 @@ function App() {
 
     {
       path:'/',
-      element:<Home></Home>
+      element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>
     },{
       path:'login',
-      element:<Login></Login>
+      element:<SignIn></SignIn>
     },{
       path:'register',
-      element:<Register></Register>
+      element:<SignUp></SignUp>
+    },{
+      path:'users',
+      element:<PrivateRoute><Users></Users></PrivateRoute>
     }
     ]
   }

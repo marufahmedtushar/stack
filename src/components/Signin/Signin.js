@@ -118,7 +118,7 @@ function Login() {
 		<div className="mt-5">
 			<button type="button" onClick={handleApi} className="w-80 focus:outline-none text-white bg-[#6941C6] focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Sign In</button>
 		</div>
-		{<p className="text-[#64748b]"> Don’t have an account? <Link className="text-[#0f172a] underline underline-offset-1" to="/register">Sign Up</Link> </p>}
+		{<p className="text-[#64748b]"> Don’t have an account? <Link className="text-[#377DFF]" to="/register">Sign Up</Link> </p>}
 	</div>
 </div>
   );

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Kalam:wght@700&display=swap');
+
+
+
+.active{
+	color: white;
+  background-color: #7F56D9;
+  padding: 1px 6px;
+  border-radius: 5px;
+}
+
