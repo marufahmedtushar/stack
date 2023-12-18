@@ -11,7 +11,7 @@ function Users() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://reqres.in/api/users');
+        const response = await axios.get(`https://reqres.in/api/users?page=${currentPage}`);
         const extraDetails = response.data.data.map((user) => ({
           ...user,
           
@@ -161,8 +161,8 @@ function Users() {
 					<div className="flex items-center justify-between p-1 md:p-4 lg:p-4">
 						<button onClick={handlePrevClick} disabled={currentPage === 1}
 						type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Prev</button>
-						<span> Page {currentPage} </span>
-						<button onClick={handleNextClick} type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Next</button>
+						<span> Page {currentPage} of 10</span>
+						<button onClick={handleNextClick} disabled={currentPage === 10} type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Next</button>
 					</div>
 				</div>
 				

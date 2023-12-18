@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import SignIn from './components/Signin/Signin';
 import SignUp from './components/Signup/Signup';
 import Users from './components/Users/Users';
+import NotFound from './components/Notfound/Notfound';
 import Main from './layout/Main';
 import PrivateRoute from './routes/PrivateRoute';
 function App() {
@@ -28,7 +29,8 @@ function App() {
       element:<PrivateRoute><Users></Users></PrivateRoute>
     }
     ]
-  }
+  },
+   {path: '*', element:<NotFound></NotFound>}
 
     ])
   return (
