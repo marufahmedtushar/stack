@@ -113,11 +113,11 @@ const handleLogout = () => {
 				
 				<NavLink activeClassName="active" to="/" ><span className=" text-white px-3 py-2 text-base font-medium">Home</span></NavLink>
 				<NavLink activeClassName="active" to="users" ><span className="text-gray-300 px-3 py-2 text-base font-medium">Users</span></NavLink>
-				<NavLink activeClassName="active" to="#" ><span className="text-gray-300  px-3 py-2 text-base font-medium">Projects</span></NavLink>
-				<NavLink activeClassName="active" to="#" ><span className="text-gray-300  px-3 py-2 text-base font-medium">Tasks</span></NavLink>
-				<NavLink activeClassName="active" to="#" ><span className="text-gray-300  px-3 py-2 text-base font-medium">Reporting</span></NavLink>
+				<NavLink activeClassName="active" to="*" ><span className="text-gray-300  px-3 py-2 text-base font-medium">Projects</span></NavLink>
+				<NavLink activeClassName="active" to="*" ><span className="text-gray-300  px-3 py-2 text-base font-medium">Tasks</span></NavLink>
+				<NavLink activeClassName="active" to="*" ><span className="text-gray-300  px-3 py-2 text-base font-medium">Reporting</span></NavLink>
 				{localStorage.getItem('token')?
-				<NavLink activeClassName="active" to="#" onClick={handleLogout}><span className="text-gray-300  block rounded-md px-3 py-2 text-base font-medium">Logout</span></NavLink>
+				<NavLink activeClassName="active" to="" onClick={handleLogout}><span className="text-gray-300  block rounded-md px-3 py-2 text-base font-medium">Logout</span></NavLink>
 
 				:
 				<>
